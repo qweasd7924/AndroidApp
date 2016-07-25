@@ -6,4 +6,5 @@
     <string name="read">Read</string>
     <string name="show_loggin">show loggin</string>
     <string name="show_password">show password</string>
+    <string name="send">Send</string>
 </resources>

@@ -14,11 +14,8 @@
         android:layout_height="wrap_content"
         android:text="@string/register"
         android:id="@+id/btnReg"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="61dp"
-        android:layout_marginStart="61dp" />
+        android:layout_centerVertical="true" android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -44,11 +41,8 @@
         android:layout_height="wrap_content"
         android:text="@string/read"
         android:id="@+id/btnRead"
-        android:layout_alignTop="@+id/btnReg"
-        android:layout_alignRight="@+id/etPassword"
-        android:layout_alignEnd="@+id/etPassword"
-        android:layout_marginRight="28dp"
-        android:layout_marginEnd="28dp" />
+        android:layout_above="@+id/tvLog" android:layout_toRightOf="@+id/btnReg" android:layout_toEndOf="@+id/btnReg"
+        android:layout_marginLeft="24dp" android:layout_marginStart="24dp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -71,4 +65,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="52dp" />
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send"
+            android:id="@+id/btnSend"
+            android:layout_alignTop="@+id/btnRead" android:layout_alignRight="@+id/tvLog"
+            android:layout_alignEnd="@+id/tvLog"/>
 </RelativeLayout>

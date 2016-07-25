@@ -13,10 +13,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnReg, btnRead;
+    Button btnReg, btnRead, btnSend;
     EditText etLoggin, etPassword;
     DBHelper dbHelper;
     TextView tvLoggin, tvPassword;
+    Connector connector;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRead = (Button) findViewById(R.id.btnRead);
         btnRead.setOnClickListener(this);
 
+        btnSend = (Button) findViewById(R.id.btnSend);
+        btnSend.setOnClickListener(this);
+
         etLoggin = (EditText) findViewById(R.id.etLoggin);
         etPassword = (EditText) findViewById(R.id.etPassword);
 
@@ -40,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        String loggin = etLoggin.getText().toString();
+        String login = etLoggin.getText().toString();
         String password = etPassword.getText().toString();
 
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -49,12 +54,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (view.getId()) {
             case R.id.btnReg:
-                contentValues.put(dbHelper.KEY_LOG, loggin);
+                contentValues.put(dbHelper.KEY_LOG, login);
                 contentValues.put(dbHelper.KEY_PAS, password);
 
                 db.insert(dbHelper.TABLE_USERS, null, contentValues);
 
-                Log.d("mLog","Put to db user with loggin: "+loggin);
+                Log.d("mLog","Put to db user with login: "+login);
                 break;
             case R.id.btnRead:
                 Cursor cursor = db.query(dbHelper.TABLE_USERS, null, null, null, null, null, null);
@@ -69,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         do {
                             indexLoggin = cursor.getColumnIndex(DBHelper.KEY_LOG);
                             indexPassword = cursor.getColumnIndex(DBHelper.KEY_PAS);
-                            Log.d("mLog","Got from db user with loggin: "+cursor.getString(indexLoggin));
+                            Log.d("mLog","Got from db user with login: "+cursor.getString(indexLoggin));
                             Log.d("mLog","and password: "+cursor.getString(indexPassword));
                         }while (cursor.moveToNext());
 
@@ -79,6 +84,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 }
                 cursor.close();
+                break;
+            case R.id.btnSend:
+                connector = new Connector();
+                connector.communicate(etLoggin.getText().toString());
+                Log.d("mLog","btn Send clicked");
+                connector.communicate("static text");
+
                 break;
         }
         dbHelper.close();
