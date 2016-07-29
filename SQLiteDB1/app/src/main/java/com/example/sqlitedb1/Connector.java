@@ -25,8 +25,8 @@ public class Connector implements Runnable{
     public void run() {
 
         int serverPort = 6666;
-        String address = "192.168.0.102";
-        Log.d("mLog", "-------\nTry to start port ");
+        String address = "192.168.0.174";
+        Log.d("mLog", "Try to start port 6666");
 
         try (Socket socket = new Socket(address, serverPort);
              DataInputStream in = new DataInputStream(socket.getInputStream());
@@ -34,7 +34,7 @@ public class Connector implements Runnable{
              BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in))) {
 
 //            String line = keyboard.readLine();
-            Log.d("mLog", "Inside try");
+            Log.d("mLog", "Port started");
 
             String line = message;
             out.writeUTF(line);

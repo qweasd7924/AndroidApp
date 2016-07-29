@@ -86,10 +86,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 cursor.close();
                 break;
             case R.id.btnSend:
+                Log.d("mLog","btn Send clicked");
                 connector = new Connector();
                 connector.communicate(etLoggin.getText().toString());
-                Log.d("mLog","btn Send clicked");
-                connector.communicate("static text");
+//                connector.communicate("static text");
 
                 break;
         }
