@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/pasId" android:layout_centerVertical="true" android:layout_centerHorizontal="true"
+            android:text="Password"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginId" android:layout_above="@+id/pasId" android:layout_centerHorizontal="true"
+            android:layout_marginBottom="73dp" android:text="Login" android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false" android:inputType="text" android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="false" android:layout_alignParentBottom="false"
+            android:layout_alignParentRight="false" android:layout_alignWithParentIfMissing="false"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ok"
+            android:id="@+id/okBtnId"
+            android:layout_marginTop="48dp" android:layout_below="@+id/pasId" android:layout_alignStart="@+id/pasId"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:id="@+id/regBtnId" android:layout_alignTop="@+id/okBtnId" android:layout_alignEnd="@+id/pasId"/>
+</RelativeLayout>

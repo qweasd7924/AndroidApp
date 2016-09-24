@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:padding="10dp" android:measureWithLargestChild="false"
+>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fullNameInfo"
+            android:id="@+id/fullNameInfoId" android:layout_margin="10dp" android:textSize="20sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loginInfo"
+            android:id="@+id/loginInfoId" android:layout_gravity="center_vertical" android:layout_margin="10dp"
+            android:textSize="20sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phoneInfo"
+            android:id="@+id/phoneInfoId" android:layout_margin="10dp" android:textSize="20sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addressInfo"
+            android:id="@+id/addressInfoId" android:layout_margin="10dp" android:textSize="20sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ordersInfo"
+            android:id="@+id/ordersInfoId" android:layout_margin="10dp" android:textSize="20sp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/readInfoBtn"
+            android:id="@+id/readInfoBtnId"/>
+</LinearLayout>

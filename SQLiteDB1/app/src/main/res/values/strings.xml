@@ -7,4 +7,10 @@
     <string name="show_loggin">show loggin</string>
     <string name="show_password">show password</string>
     <string name="send">Send</string>
+    <string name="ordersInfo">Orders:</string>
+    <string name="addressInfo">Address:</string>
+    <string name="phoneInfo">Phone:</string>
+    <string name="loginInfo">Login:</string>
+    <string name="fullNameInfo">Full Name:</string>
+    <string name="readInfoBtn">Read</string>
 </resources>
